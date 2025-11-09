@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="images/uvd.jpg" alt="USB Video Downloader Banner" width="30%">
+</p>
+
 # 📥 USB Video Downloader
 
 > **A self-contained, portable video downloader — runs directly from your USB stick with zero dependencies.**
@@ -6,11 +10,13 @@
 
 ## 🧠 Why This Exists
 
-This is a passion project born during my college years. I was constantly downloading educational videos from platforms like YouTube for offline study, but tired of manual downloads and the hassle of managing files across different computers.
+This project started from a long-time habit of mine: collecting videos for offline viewing. I never fully trusted streaming platforms to keep content around forever, and I liked having things saved locally so I could rewatch them anytime, even without an internet connection.
 
-Originally written in Python, I later realized that not every campus PC had Python installed — making the script unusable on shared machines. So I rewrote it in **Go** to produce a single, standalone executable that runs anywhere, **without requiring any interpreter or installation**.
+Back in college, I used to collect video URLs whenever I came across something interesting, whether during lectures, on my phone, or while sitting on the bus. Later, I’d download them to my USB drive when I got back to my laptop. I liked having all my educational videos in one place, neatly organized on a single drive instead of scattered across devices and random folders. To make that easier, I wrote a small Python script to automate the process. It worked fine on my own machine, but I quickly ran into the problem that not every college computer had Python available, which meant I couldn’t always run my own tool when I needed it most.
 
-Now I keep everything — the downloader, `yt-dlp`, and my download queue — right on my USB stick. Plug in, run, and collect videos offline. Perfect for students, researchers, or lifelong learners.
+Years later, while going through some old files, I found that original script. It reminded me of those days and the little frustrations that came with it, so I decided to rewrite it in Go. The new version compiles into a single portable executable that runs anywhere, without needing any setup or dependencies.
+
+I don’t really need it as much anymore, but it feels good to finally fix something that used to bug me years ago. It’s a small, satisfying improvement for my younger self who just wanted an easy way to download videos without any hassle.
 
 ---
 
@@ -30,7 +36,7 @@ Now I keep everything — the downloader, `yt-dlp`, and my download queue — ri
 
 This section covers how to set up the USB Video Downloader on your USB drive or preferred location.
 
-1. [Download the ZIP folder](https://github.com/bryanbarcelona/usb-video-downloader/releases/download/v1.0.0/usb-video-downloader.zip).
+1. [Download the ZIP folder](https://github.com/bryanbarcelona/usb-video-downloader/releases/download/v1.0.0/usb-video-downloader-v1.0.0.zip).
 2. Extract the ZIP to your USB drive or another chosen location.
 3. Optionally, rename the extracted "usb-video-downloader" folder to something like `Staging`, `VideoCollection` or whatever you like.
 4. Ensure the folder contains exactly these three files:
@@ -80,6 +86,8 @@ Since it uses [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) under the hood (via G
 
 👉 Full list of supported sites: [yt-dlp Supported Sites](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md)
 
-> We use `yt-dlp` as a subprocess (not a native Go library) because video sites change constantly — and `yt-dlp` is actively maintained by a large community. This ensures long-term reliability without reinventing the wheel.
+> This downloader uses `yt-dlp` as a subprocess (not a native Go library) because video sites change constantly — and `yt-dlp` is actively maintained by a large community. This ensures long-term reliability without reinventing the wheel.
 
-## 
+## 🤖 AI Usage Declaration
+
+Noticed the README looks a little too polished? Why, butter my biscuit, you caught that, didn’t you? Full disclosure: parts of this README were written with help from a large language model. Everything was reviewed and edited by hand to make sure it accurately reflects the project and my own voice. Consider it a collaboration between human intent and machine eloquence.
